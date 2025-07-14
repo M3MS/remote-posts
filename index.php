@@ -4,7 +4,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Remote Posts
- * Description:       SHortcode to fetch and display posts with Wordpress API.
+ * Description:       Shortcode to fetch and display posts with Wordpress API.
  * Version:           1.0.0
  * Author:            Mehdy Elm
  * Author URI:        https://mehdy-elm.com
@@ -43,10 +43,7 @@ class FetchApi {
             'timeout' => 45
         ));
     
-        
         $response_code = wp_remote_retrieve_response_code($response);
-
-        var_dump($response_code);
 
         if ($response_code !== 200) {
             return false;
